@@ -58,13 +58,14 @@ import ServicesDetailsPage from "@/pages/ServicesDetailsPage";
 import TeamDetailsPage from "@/pages/TeamDetailsPage";
 import TeamPage from "@/pages/TeamPage";
 import NotFoundPage from "@/pages/NotFoundPage";
+import BrandieHomePage from "./pages/BrandieHomePage";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<MainLayout headerStyle={1} footerStyle={1} />}>
-        <Route path="/" element={<Home1Page />} />
-        <Route path="/index-dark" element={<Home1Page />} />
+        <Route path="/" element={<BrandieHomePage />} />
+        <Route path="/index-dark" element={<BrandieHomePage />} />
       </Route>
       <Route element={<MainLayout headerStyle={1} footerStyle={1} noFooter />}>
         <Route path="/portfolio-curtain" element={<PortfolioCurtainPage />} />

@@ -4,6 +4,7 @@ const isDarkPath = (path: string) => /-dark\/?$/.test(path);
 
 export default function ThemeRouteSync() {
     const pathname = useLocation().pathname;
+    console.log({pathname})
 
     useEffect(() => {
         const html = document.documentElement;

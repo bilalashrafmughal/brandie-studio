@@ -63,7 +63,7 @@ export default function Section1({ classList }: { classList?: string }) {
                         <div className="col-xxl-8 col-12 ps-xxl-5">
                             <div className="at-title-anim overflow-hidden">
                                 <h1 className="fz-160 fw-600 mb-0 at-title-text">
-                                    Orisa Studio<sup className="fz-80 fw-400">®</sup>
+                                    Brandie Studio<sup className="fz-80 fw-400">®</sup>
                                 </h1>
                             </div>
                             <div className="d-flex flex-wrap align-items-center justify-content-between gap-2">

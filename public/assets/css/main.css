@@ -3492,14 +3492,11 @@ input[type=color] {
   transform: scale(1);
 }
 .at-main-menu.menu-light nav ul li:hover.has-dropdown > a {
-  color: #fff;
+  color: var(--at-common-black);
   background: rgba(255, 255, 255, 0.2);
 }
 .at-main-menu.menu-light nav ul li.has-dropdown > a {
-  color: #fff;
-}
-.at-main-menu.menu-light nav ul li.has-dropdown > a::after {
-  filter: invert(1);
+  color: var(--at-common-black);
 }
 .at-main-menu nav ul li {
   list-style: none;

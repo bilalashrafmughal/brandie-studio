@@ -71,10 +71,11 @@ export default function Footer1() {
                 <img
                   className="mt-5"
                   data-width="50"
-                  src="/assets/imgs/template/logo/favicon-dark.svg"
-                  alt="Orisa"
+                  src="/assets/imgs/icons/b-icon.svg"
+                  alt="Brandie"
                   width={50}
                   height={50}
+                  style={{ filter: "grayscale(1) brightness(3) contrast(0.6)" }}
                 />
                 <div>
                   <h4 className="text-white reveal-text">
@@ -94,8 +95,8 @@ export default function Footer1() {
               <div className="at-footer-title-wrap">
                 <h6 className="text-white">(212) 555-7398</h6>
                 <h4 className="text-white text-decoration-underline text-wrap">
-                  <a href="mailto:hello@orisa.com" className="text-white text-decoration-underline">
-                    hello@orisa.com
+                  <a href="mailto:hello@brandie.com" className="text-white text-decoration-underline">
+                    hello@brandie.com
                   </a>
                 </h4>
                 <div className="at-footer-widget at-footer-link pt-50">
@@ -139,7 +140,7 @@ export default function Footer1() {
               </div>
               <div className="col-xxl-9 col-lg-8 col-12 text-lg-end">
                 <h1 className="fz-160 common-white mb-0 text-scale-anim">
-                  Orisa Studio<sup className="fz-80 fw-400">®</sup>
+                  Brandie Studio<sup className="fz-80 fw-400">®</sup>
                 </h1>
               </div>
             </div>
@@ -149,7 +150,7 @@ export default function Footer1() {
             <div className="row align-items-center g-3">
               <div className="col-lg-2">
                 <div className="at-footer-copyright-wrap text">
-                  <span className="at-footer-copyright">Orisa © 2026 </span>
+                  <span className="at-footer-copyright">Brandie © 2026 </span>
                 </div>
               </div>
               <div className="col-lg-8">

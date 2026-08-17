@@ -118,8 +118,15 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
           <div className="at-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="at-offcanvas-logo">
               <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
-                <img data-width="30" src="/assets/imgs/template/logo/favicon.svg" alt="Orisa" width={30} height={30} />
-                <h6 className="fw-700 fz-24 mb-0">Orisa</h6>
+                <img
+                  data-width="239"
+                  src="/assets/imgs/icons/brandie-logo.svg"
+                  alt="Brandie"
+                  width={239}
+                  height={62}
+                  className="d-block"
+                  style={{ width: "auto", height: "34px" }}
+                />
               </Link>
             </div>
             <div className="at-offcanvas-close-btn">
@@ -187,14 +194,14 @@ export default function SideBar({ open, hamburgerOpen, onClose }: SideBarProps) 
             <div className="at-header-logo d-flex justify-content-between align-items-center mb-50">
               <Link to="/" className="text-decoration-none d-inline-flex align-items-center gap-2">
                 <img
-                  className="dark-mode-invert"
-                  data-width="30"
-                  src="/assets/imgs/template/logo/favicon.svg"
-                  alt="Orisa"
-                  width={30}
-                  height={30}
+                  data-width="239"
+                  src="/assets/imgs/icons/brandie-logo.svg"
+                  alt="Brandie"
+                  width={239}
+                  height={62}
+                  className="d-block"
+                  style={{ width: "auto", height: "34px" }}
                 />
-                <h6 className="fw-700 fz-24 mb-0">Orisa</h6>
               </Link>
               <span className="hamburger-close-btn close-sidebar" role="button" tabIndex={0} aria-label="Close" onClick={onClose}>
                 <CloseIconSvg />
