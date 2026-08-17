@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 type Theme = "light" | "dark";
 
 export const useTheme = () => {
-    const [theme, setTheme] = useState<Theme>("light");
+    const [theme, setTheme] = useState<Theme>("dark");
     const [isMounted, setIsMounted] = useState(false);
 
     // Persist + apply — only called from user actions (toggle / setThemeMode).
