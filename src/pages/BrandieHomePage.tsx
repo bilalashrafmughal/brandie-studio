@@ -17,7 +17,7 @@ import Section7 from "@/shared/sections/index-15/Section9";
 export default function BrandieHomePage() {
   return (
     <>
-      <PageMeta title="Brandie Studio - Home" />
+      <PageMeta title="Home - Brandie Studio" />
                 <Section1 />
                 <Section2 />
                 <Section3 />

@@ -8,7 +8,7 @@ import Section5 from "@/shared/sections/services-2/Section3";
 export default function Services2Page() {
   return (
     <>
-      <PageMeta title="Orisa - Services2" />
+      <PageMeta title="Services - Brandie Studio" />
                 <Section1 />
                 <Section2 />
                 <Section3 />
