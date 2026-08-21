@@ -65,6 +65,8 @@ export default function App() {
     <Routes>
       <Route element={<MainLayout headerStyle={1} footerStyle={1} />}>
         <Route path="/" element={<BrandieHomePage />} />
+        <Route path="/portfolio" element={<Portfolio2Page />} />
+        <Route path="/services" element={<Services2Page />} />
         <Route path="/index-dark" element={<BrandieHomePage />} />
       </Route>
       <Route element={<MainLayout headerStyle={1} footerStyle={1} noFooter />}>

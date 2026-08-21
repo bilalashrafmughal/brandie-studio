@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MainMenuRootList } from "@/shared/mobile-menu/MobileMenuCloneContext";
 
 const MEGA_ARROW = (
@@ -156,11 +156,11 @@ function LinkSwap({ label }: { label: string }) {
 export default function MainMenu() {
   return (
     <MainMenuRootList>
-      <li className="has-dropdown">
-        <a href="#" onClick={(e) => e.preventDefault()}>
+      <li>
+        <Link to="/" >
           <LinkSwap label="Home" />
-        </a>
-        <div className="at-submenu submenu at-megamenu">
+        </Link>
+        {/* <div className="at-submenu submenu at-megamenu">
           <div className="row">
             <div className="col-xl-6">
               <MegaColumn title="Light Version" items={HOME_LIGHT} />
@@ -169,14 +169,14 @@ export default function MainMenu() {
               <MegaColumn title="Dark Version" items={HOME_DARK} />
             </div>
           </div>
-        </div>
+        </div> */}
       </li>
 
-      <li className="has-dropdown">
-        <a href="#" onClick={(e) => e.preventDefault()}>
-          <LinkSwap label="Page" />
-        </a>
-        <div className="at-submenu submenu at-megamenu">
+      <li>
+        <Link to="/services">
+          <LinkSwap label="Services" />
+        </Link>
+        {/* <div className="at-submenu submenu at-megamenu">
           <div className="row">
             <div className="col-xl-4">
               <MegaColumn title="About Us" items={ABOUT_LINKS} />
@@ -188,14 +188,14 @@ export default function MainMenu() {
               <MegaColumn title="Other" items={OTHER_LINKS} />
             </div>
           </div>
-        </div>
+        </div> */}
       </li>
 
-      <li className="has-dropdown">
-        <a href="#" onClick={(e) => e.preventDefault()}>
+      <li className="">
+        <Link to="/portfolio">
           <LinkSwap label="Portfolio" />
-        </a>
-        <div className="at-submenu submenu at-megamenu">
+        </Link>
+        {/* <div className="at-submenu submenu at-megamenu">
           <div className="row">
             <div className="col-xl-4">
               <MegaColumn title="Creative" items={PORTFOLIO_CREATIVE} />
@@ -207,7 +207,7 @@ export default function MainMenu() {
               <MegaColumn title="Details" items={PORTFOLIO_DETAILS} />
             </div>
           </div>
-        </div>
+        </div> */}
       </li>
 
       <li className="has-dropdown">
