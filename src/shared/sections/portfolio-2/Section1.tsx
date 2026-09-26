@@ -1,7 +1,8 @@
 import PortfolioCard2 from "@/shared/cards/PortfolioCard2";
 import PortfolioFilterSort, { type FilterValue } from "@/shared/sections/portfolio-1/PortfolioFilterSort";
+import type { ReactNode } from "react";
 
-type PortfolioItem = {
+export type PortfolioItem = {
     classList: string;
     category: FilterValue;
     link: string;
@@ -10,82 +11,14 @@ type PortfolioItem = {
     headline: string;
     description: string;
     title: string;
-    featuredHtml?: React.ReactNode;
+    featuredHtml?: ReactNode;
 };
 
-const PORTFOLIO_DATA: PortfolioItem[] = [
-    {
-        classList: "col-lg-6",
-        category: "design",
-        link: "/portfolio-details-2",
-        linkCase: "#",
-        img: "/assets/imgs/pages/img-63.webp",
-        headline: "+72% ROAS in 90 days",
-        description:
-            "We restructured paid campaigns, refined audience targeting, and optimized creatives to drive higher returns while reducing wasted ad spend.",
-        title: "Ecommerce Brand",
-        featuredHtml: (
-            <span className="alt-portfolio-tag bg-theme-primary px-3 py-2 rounded-pill p-absolute top-0 end-0 m-4 fz-10 fw-600 text-white">
-                FEATURED CASE
-            </span>
-        ),
-    },
-    {
-        classList: "col-lg-6",
-        category: "photography",
-        link: "/portfolio-details-2",
-        linkCase: "#",
-        img: "/assets/imgs/pages/img-64.webp",
-        headline: "3× qualified leads in 4 months",
-        description:
-            "We restructured paid campaigns, refined audience targeting, and optimized creatives to drive higher returns while reducing wasted ad spend.",
-        title: "SaaS Startup",
-    },
-    {
-        classList: "col-lg-6",
-        category: "marketing",
-        link: "/portfolio-details-2",
-        linkCase: "#",
-        img: "/assets/imgs/pages/img-65.webp",
-        headline: "–38% Cost per acquisition",
-        description:
-            "We restructured paid campaigns, refined audience targeting, and optimized creatives to drive higher returns while reducing wasted ad spend.",
-        title: "Fintech Platform",
-    },
-    {
-        classList: "col-lg-6",
-        category: "marketing",
-        link: "/portfolio-details-2",
-        linkCase: "#",
-        img: "/assets/imgs/pages/img-66.webp",
-        headline: "+41% conversion rate",
-        description:
-            "We restructured paid campaigns, refined audience targeting, and optimized creatives to drive higher returns while reducing wasted ad spend.",
-        title: "B2B Service Company",
-    },
-    {
-        classList: "col-lg-6",
-        category: "photography",
-        link: "/portfolio-details-2",
-        linkCase: "#",
-        img: "/assets/imgs/pages/img-67.webp",
-        headline: "+54% revenue growth YoY",
-        description:
-            "We restructured paid campaigns, refined audience targeting, and optimized creatives to drive higher returns while reducing wasted ad spend.",
-        title: "DTC Brand",
-    },
-    {
-        classList: "col-lg-6",
-        category: "photography",
-        link: "/portfolio-details-2",
-        linkCase: "#",
-        img: "/assets/imgs/pages/img-68.webp",
-        headline: "$1.4M revenue in 6 months",
-        description:
-            "We restructured paid campaigns, refined audience targeting, and optimized creatives to drive higher returns while reducing wasted ad spend.",
-        title: "Global Brand",
-    },
-];
+type Section1Props = {
+    items?: PortfolioItem[];
+    loading?: boolean;
+    error?: string | null;
+};
 
 const ARROW_SVG = (
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +29,7 @@ const ARROW_SVG = (
     </svg>
 );
 
-export default function Section1() {
+export default function Section1({ items = [], loading = false, error = null }: Section1Props) {
     return (
         <section className="sec-1-portfolio-2 overflow-hidden pt-150 pb-110 border-bottom-100">
             <div className="container pb-60">
@@ -110,45 +43,53 @@ export default function Section1() {
                 </div>
             </div>
             <div className="container">
-                <PortfolioFilterSort
-                    items={PORTFOLIO_DATA}
-                    filterColumnClassName="col-lg-8 mx-auto"
-                    filterFlexClassName="justify-content-center"
-                    leadingColumnClassName="col-2"
-                >
-                    {(visibleItems, { hasMore, onLoadMore }) => (
-                        <div className="row">
-                            {visibleItems.map((item, idx) => (
-                                <PortfolioCard2
-                                    key={`${item.title}-${idx}`}
-                                    classList={item.classList}
-                                    category={item.category}
-                                    link={item.link}
-                                    linkCase={item.linkCase}
-                                    img={item.img}
-                                    headline={item.headline}
-                                    description={item.description}
-                                    title={item.title}
-                                    featuredHtml={item.featuredHtml}
-                                />
-                            ))}
-                            {hasMore && (
-                                <div className="col-12 text-center">
-                                    <button type="button" className="at-btn" onClick={onLoadMore}>
-                                        <span>
-                                            <span className="text-1">LOAD MORE PROJECTS</span>
-                                            <span className="text-2">LOAD MORE PROJECTS</span>
-                                        </span>
-                                        <i>
-                                            {ARROW_SVG}
-                                            {ARROW_SVG}
-                                        </i>
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                    )}
-                </PortfolioFilterSort>
+                {loading ? (
+                    <p className="text-center fz-font-lg neutral-900">Loading projects…</p>
+                ) : error ? (
+                    <p className="text-center fz-font-lg neutral-900">{error}</p>
+                ) : items.length === 0 ? (
+                    <p className="text-center fz-font-lg neutral-900">No projects found.</p>
+                ) : (
+                    <PortfolioFilterSort
+                        items={items}
+                        filterColumnClassName="col-lg-8 mx-auto"
+                        filterFlexClassName="justify-content-center"
+                        leadingColumnClassName="col-2"
+                    >
+                        {(visibleItems, { hasMore, onLoadMore }) => (
+                            <div className="row">
+                                {visibleItems.map((item, idx) => (
+                                    <PortfolioCard2
+                                        key={`${item.title}-${idx}`}
+                                        classList={item.classList}
+                                        category={item.category}
+                                        link={item.link}
+                                        linkCase={item.linkCase}
+                                        img={item.img}
+                                        headline={item.headline}
+                                        description={item.description}
+                                        title={item.title}
+                                        featuredHtml={item.featuredHtml}
+                                    />
+                                ))}
+                                {hasMore && (
+                                    <div className="col-12 text-center">
+                                        <button type="button" className="at-btn" onClick={onLoadMore}>
+                                            <span>
+                                                <span className="text-1">LOAD MORE PROJECTS</span>
+                                                <span className="text-2">LOAD MORE PROJECTS</span>
+                                            </span>
+                                            <i>
+                                                {ARROW_SVG}
+                                                {ARROW_SVG}
+                                            </i>
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </PortfolioFilterSort>
+                )}
             </div>
         </section>
     );

@@ -11,6 +11,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "axios": "^1.20.0",
     "bootstrap": "^5.3.3",
     "gsap": "^3.12.7",
     "isotope-layout": "^3.0.6",

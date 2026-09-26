@@ -10381,6 +10381,12 @@ input.footer-15__form-input:focus {
 .alt-portfolio-thumb {
   border-radius: 16px;
 }
+.alt-portfolio-item.card-portfolio .alt-portfolio-thumb {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
 .alt-portfolio-thumb::before {
   content: "";
   position: absolute;

@@ -1,64 +1,66 @@
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "@/layouts/MainLayout";
-import About1Page from "@/pages/About1Page";
-import About2Page from "@/pages/About2Page";
-import About3Page from "@/pages/About3Page";
-import Archive1Page from "@/pages/Archive1Page";
-import Archive2Page from "@/pages/Archive2Page";
-import Archive3Page from "@/pages/Archive3Page";
-import Archive4Page from "@/pages/Archive4Page";
-import BlogDetailsPage from "@/pages/BlogDetailsPage";
-import ComingSoonPage from "@/pages/ComingSoonPage";
-import Contact1Page from "@/pages/Contact1Page";
-import Contact2Page from "@/pages/Contact2Page";
-import FaqsPage from "@/pages/FaqsPage";
-import Home10Page from "@/pages/Home10Page";
-import Home11Page from "@/pages/Home11Page";
-import Home12Page from "@/pages/Home12Page";
-import Home13Page from "@/pages/Home13Page";
-import Home14Page from "@/pages/Home14Page";
-import Home15Page from "@/pages/Home15Page";
-import Home1Page from "@/pages/Home1Page";
-import Home2Page from "@/pages/Home2Page";
-import Home3Page from "@/pages/Home3Page";
-import Home4Page from "@/pages/Home4Page";
-import Home5Page from "@/pages/Home5Page";
-import Home6Page from "@/pages/Home6Page";
-import Home7Page from "@/pages/Home7Page";
-import Home8Page from "@/pages/Home8Page";
-import Home9Page from "@/pages/Home9Page";
-import Portfolio1Page from "@/pages/Portfolio1Page";
-import Portfolio2Page from "@/pages/Portfolio2Page";
-import Portfolio3Page from "@/pages/Portfolio3Page";
-import Portfolio4Page from "@/pages/Portfolio4Page";
-import Portfolio5Page from "@/pages/Portfolio5Page";
-import Portfolio6Page from "@/pages/Portfolio6Page";
-import PortfolioCinemaPage from "@/pages/PortfolioCinemaPage";
-import PortfolioCurtainPage from "@/pages/PortfolioCurtainPage";
-import PortfolioDetails1Page from "@/pages/PortfolioDetails1Page";
-import PortfolioDetails2Page from "@/pages/PortfolioDetails2Page";
-import PortfolioDetails3Page from "@/pages/PortfolioDetails3Page";
-import PortfolioDetails4Page from "@/pages/PortfolioDetails4Page";
-import PortfolioDetails5Page from "@/pages/PortfolioDetails5Page";
-import PortfolioDetails6Page from "@/pages/PortfolioDetails6Page";
-import PortfolioHorizontalPage from "@/pages/PortfolioHorizontalPage";
-import PortfolioSplitPage from "@/pages/PortfolioSplitPage";
-import PortfolioStackPage from "@/pages/PortfolioStackPage";
-import PortfolioVistaPage from "@/pages/PortfolioVistaPage";
-import PortfolioZstackPage from "@/pages/PortfolioZstackPage";
-import PricingPage from "@/pages/PricingPage";
-import ProductArchivePage from "@/pages/ProductArchivePage";
-import ProductCartPage from "@/pages/ProductCartPage";
-import ProductCheckoutPage from "@/pages/ProductCheckoutPage";
-import ProductDetailsPage from "@/pages/ProductDetailsPage";
-import Services1Page from "@/pages/Services1Page";
-import Services2Page from "@/pages/Services2Page";
-import Services3Page from "@/pages/Services3Page";
-import ServicesDetailsPage from "@/pages/ServicesDetailsPage";
-import TeamDetailsPage from "@/pages/TeamDetailsPage";
-import TeamPage from "@/pages/TeamPage";
+import PortfolioDetailPage from "@/pages/PortfolioDetailPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 import BrandieHomePage from "./pages/BrandieHomePage";
+import Portfolio2Page from "@/pages/Portfolio2Page";
+import Services2Page from "@/pages/Services2Page";
+// import About1Page from "@/pages/About1Page";
+// import About2Page from "@/pages/About2Page";
+// import About3Page from "@/pages/About3Page";
+// import Archive1Page from "@/pages/Archive1Page";
+// import Archive2Page from "@/pages/Archive2Page";
+// import Archive3Page from "@/pages/Archive3Page";
+// import Archive4Page from "@/pages/Archive4Page";
+// import BlogDetailsPage from "@/pages/BlogDetailsPage";
+// import ComingSoonPage from "@/pages/ComingSoonPage";
+// import Contact1Page from "@/pages/Contact1Page";
+// import Contact2Page from "@/pages/Contact2Page";
+// import FaqsPage from "@/pages/FaqsPage";
+// import Home10Page from "@/pages/Home10Page";
+// import Home11Page from "@/pages/Home11Page";
+// import Home12Page from "@/pages/Home12Page";
+// import Home13Page from "@/pages/Home13Page";
+// import Home14Page from "@/pages/Home14Page";
+// import Home15Page from "@/pages/Home15Page";
+// import Home1Page from "@/pages/Home1Page";
+// import Home2Page from "@/pages/Home2Page";
+// import Home3Page from "@/pages/Home3Page";
+// import Home4Page from "@/pages/Home4Page";
+// import Home5Page from "@/pages/Home5Page";
+// import Home6Page from "@/pages/Home6Page";
+// import Home7Page from "@/pages/Home7Page";
+// import Home8Page from "@/pages/Home8Page";
+// import Home9Page from "@/pages/Home9Page";
+// import Portfolio1Page from "@/pages/Portfolio1Page";
+// import Portfolio3Page from "@/pages/Portfolio3Page";
+// import Portfolio4Page from "@/pages/Portfolio4Page";
+// import Portfolio5Page from "@/pages/Portfolio5Page";
+// import Portfolio6Page from "@/pages/Portfolio6Page";
+// import PortfolioCinemaPage from "@/pages/PortfolioCinemaPage";
+// import PortfolioCurtainPage from "@/pages/PortfolioCurtainPage";
+// import PortfolioDetails1Page from "@/pages/PortfolioDetails1Page";
+// import PortfolioDetails2Page from "@/pages/PortfolioDetails2Page";
+// import PortfolioDetails3Page from "@/pages/PortfolioDetails3Page";
+// import PortfolioDetails4Page from "@/pages/PortfolioDetails4Page";
+// import PortfolioDetails5Page from "@/pages/PortfolioDetails5Page";
+// import PortfolioDetails6Page from "@/pages/PortfolioDetails6Page";
+// import PortfolioHorizontalPage from "@/pages/PortfolioHorizontalPage";
+// import PortfolioSplitPage from "@/pages/PortfolioSplitPage";
+// import PortfolioStackPage from "@/pages/PortfolioStackPage";
+// import PortfolioVistaPage from "@/pages/PortfolioVistaPage";
+// import PortfolioZstackPage from "@/pages/PortfolioZstackPage";
+// import PricingPage from "@/pages/PricingPage";
+// import ProductArchivePage from "@/pages/ProductArchivePage";
+// import ProductCartPage from "@/pages/ProductCartPage";
+// import ProductCheckoutPage from "@/pages/ProductCheckoutPage";
+// import ProductDetailsPage from "@/pages/ProductDetailsPage";
+// import Services1Page from "@/pages/Services1Page";
+// import Services3Page from "@/pages/Services3Page";
+// import ServicesDetailsPage from "@/pages/ServicesDetailsPage";
+// import TeamDetailsPage from "@/pages/TeamDetailsPage";
+// import TeamPage from "@/pages/TeamPage";
+
 
 export default function App() {
   return (
@@ -66,9 +68,12 @@ export default function App() {
       <Route element={<MainLayout headerStyle={1} footerStyle={1} />}>
         <Route path="/" element={<BrandieHomePage />} />
         <Route path="/portfolio" element={<Portfolio2Page />} />
+        <Route path="/portfolio/:slug" element={<PortfolioDetailPage />} />
         <Route path="/services" element={<Services2Page />} />
         <Route path="/index-dark" element={<BrandieHomePage />} />
       </Route>
+
+{/*       
       <Route element={<MainLayout headerStyle={1} footerStyle={1} noFooter />}>
         <Route path="/portfolio-curtain" element={<PortfolioCurtainPage />} />
         <Route path="/portfolio-vista" element={<PortfolioVistaPage />} />
@@ -172,7 +177,7 @@ export default function App() {
       <Route element={<MainLayout headerStyle={15} footerStyle={15} />}>
         <Route path="/index-15" element={<Home15Page />} />
         <Route path="/index-15-dark" element={<Home15Page />} />
-      </Route>
+      </Route> */}
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
         <Route path="*" element={<NotFoundPage />} />
       </Route>

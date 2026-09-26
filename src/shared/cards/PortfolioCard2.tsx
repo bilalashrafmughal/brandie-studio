@@ -42,7 +42,7 @@ export default function PortfolioCard2({
             <span className="bg-transparent text-uppercase border px-3 py-2 rounded-pill common-white fz-font-label">
               {category}
             </span>
-            <h4 className="fw-400 text-white mb-0 mt-15">{headline}</h4>
+            {/* <h4 className="fw-400 text-white mb-0 mt-15">{headline}</h4> */}
             <p className="text-white fz-font-md mb-0 mt-10 text-truncate-3 des pr-250">{description}</p>
           </div>
         </span>
